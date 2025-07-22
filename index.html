@@ -65,8 +65,7 @@
             <button id="nav-space" class="nav-btn active flex-1 md:flex-initial text-center py-2 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold" data-view="space">공간별</button>
             <button id="nav-plant" class="nav-btn flex-1 md:flex-initial text-center py-2 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold" data-view="plant">식물별</button>
             <button id="nav-analysis" class="nav-btn flex-1 md:flex-initial text-center py-2 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold" data-view="analysis">환경분석</button>
-            <button id="nav-guide" class="nav-btn flex-1 md:flex-initial text-center py-2 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold" data-view="guide">종합가이드</button>
-            <button id="nav-themes" class="nav-btn flex-1 md:flex-initial text-center py-2 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold" data-view="themes">테마별</button>
+            <button id="nav-styling" class="nav-btn flex-1 md:flex-initial text-center py-2 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold" data-view="styling">테마 & 스타일링</button>
         </nav>
 
         <main id="app-container">
@@ -242,7 +241,7 @@
                 },
                 {
                     name: "홍콩 야자",
-                    theme: "지중해",
+                    theme: "정글",
                     visual_feature: "우산처럼 펼쳐진 광택 있는 잎",
                     styling_note: "테라코타 화분에 심어 밝은 창가에 배치, 풍성한 녹음 추가",
                     needs: { light: 3, water: 3, humidity: 4 },
@@ -410,16 +409,22 @@
                 },
                 {
                     name: "연필선인장",
-                    theme: "정글",
-                    visual_feature: "가늘고 길게 늘어지는 산호 모양의 줄기",
-                    styling_note: "행잉 바스켓에 심어 중공간을 채우는 독특한 질감",
-                    needs: { light: 3, water: 3, humidity: 4 },
-                    care: { watering_tip: "일반 선인장과 달리 약간의 습도를 좋아합니다. 겉흙이 말랐을 때 물을 주세요. 과습엔 약합니다.", pests: "깍지벌레, 응애가 생길 수 있습니다. 통풍이 중요합니다.", fertilizer_tip: "성장기에 희석한 액상 비료를 월 1회 주면 풍성한 성장에 도움이 됩니다.", growth_tip: "정글 선인장의 일종으로, 강한 직사광선보다는 밝은 간접광을 선호합니다. 촉촉한 공기를 좋아해 다른 식물과 함께 두면 좋습니다.", tools: "행잉 화분, 분무기" },
-                    recovery: { space: "지하 공간", reason: "회복기에는 안정적인 습도와 온도가 중요합니다. 과습 위험이 적고 통풍이 제어되는 지하 공간이 안전합니다." },
+                    theme: "아프리카",
+                    visual_feature: "가늘고 긴 연필 모양의 줄기가 산호처럼 자라는 형태",
+                    styling_note: "독특한 수직 라인과 질감, 미니멀하거나 이국적인 공간에 포인트",
+                    needs: { light: 5, water: 1, humidity: 2 },
+                    care: { 
+                        watering_tip: "과습에 매우 취약하므로 흙이 완전히 마르고 며칠 뒤에 물을 주세요. 겨울에는 거의 단수합니다.", 
+                        pests: "통풍이 불량하면 깍지벌레가 생길 수 있습니다. 과습으로 인한 무름병이 가장 흔한 문제입니다.", 
+                        fertilizer_tip: "비료 요구량이 적습니다. 성장기인 봄, 가을에 다육식물 전용 비료를 소량 주는 것으로 충분합니다.", 
+                        growth_tip: "아프리카 원산지의 다육식물로, 강한 빛을 받을수록 웃자라지 않고 단단하게 자랍니다. 통풍이 매우 중요합니다. 자를 때 나오는 흰 수액은 독성이 있으니 주의해야 합니다.", 
+                        tools: "배수가 잘되는 흙, 토분" 
+                    },
+                    recovery: { space: "계단실 상부", reason: "과습에 약하므로 회복기에는 통풍이 잘되고 건조한 환경이 필수적입니다. 밝은 빛도 회복에 도움이 됩니다." },
                     growth: [
-                        { rank: 1, space: "정원 테라스", reason: "밝은 간접광과 뛰어난 통풍이 과습을 막아주어 건강하게 자랄 최적의 환경입니다." },
-                        { rank: 2, space: "계단실 하부", reason: "부담스럽지 않은 광량과 우수한 통풍으로 쉽게 관리할 수 있는 이상적인 실내 공간입니다." },
-                        { rank: 3, space: "2층 거실", reason: "북향 창가의 안정적인 빛을 받으며 늘어지는 수형을 감상하기에 좋습니다." }
+                        { rank: 1, space: "게스트룸", reason: "강렬한 서향 빛과 건조한 환경은 아프리카 다육식물인 연필선인장에게 최고의 서식지입니다." },
+                        { rank: 2, space: "계단실 상부", reason: "강한 남서향 빛을 직접 받아 웃자람 없이 단단하게 자랄 수 있습니다." },
+                        { rank: 3, space: "2층 거실", reason: "서향 창 바로 앞에 두어 충분한 광량을 확보할 수 있습니다. 통풍이 좋아 과습 위험도 적습니다." }
                     ]
                 },
                 {
@@ -581,8 +586,7 @@
                 case 'space': renderSpaceView(); break;
                 case 'plant': renderPlantView(); break;
                 case 'analysis': renderAnalysisView(); break;
-                case 'guide': renderGuideView(); break;
-                case 'themes': renderThemeView(); break;
+                case 'styling': renderStylingGuideView(); break;
             }
         }
 
@@ -597,188 +601,206 @@
             return `<span class="text-xs font-bold ${classes} px-2 py-1 rounded-full">${text}</span>`;
         }
         
-        function renderGuideView() {
-            appContainer.innerHTML = `
-                <div id="guide-view">
-                    <div class="guide-section">
-                        <h2 class="guide-title">🌿 현명한 비료 사용 가이드</h2>
-                        <div class="space-y-4 text-stone-700 text-sm sm:text-base">
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-1">1. 액상 비료 (빠른 성장 지원)</h3>
-                                <p><strong class="text-teal-600">언제:</strong> 식물이 활발히 자라는 봄~가을 (4월~10월).</p>
-                                <p><strong class="text-teal-600">어떻게:</strong> 제품 설명서에 맞춰 물에 희석하여, 물 주는 날 2주~1달 간격으로 흙에 부어줍니다.</p>
-                                <p><strong class="text-teal-600">핵심팁:</strong> 과용은 뿌리를 상하게 할 수 있습니다. 차라리 기준보다 옅게 희석해서 주는 것이 안전합니다.</p>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-1">2. 알갱이 비료 (지속적인 기초 영양)</h3>
-                                <p><strong class="text-teal-600">언제:</strong> 봄철 분갈이 시 또는 매년 봄 화분 위.</p>
-                                <p><strong class="text-teal-600">어떻게:</strong> 분갈이 시 흙에 소량 섞어주거나, 화분 위 흙에 살짝 파묻어 줍니다. 물을 줄 때마다 서서히 녹아 3~6개월간 영양을 공급합니다.</p>
-                                <p><strong class="text-teal-600">핵심팁:</strong> 뿌리에 직접 닿으면 좋지 않으니, 흙과 잘 섞거나 흙 위에 올려두는 방식으로 사용하세요.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="guide-section">
-                        <h2 class="guide-title">❄️ 서울 기준, 겨울나기 (월동) 가이드</h2>
-                        <div class="space-y-4 text-stone-700 text-sm sm:text-base">
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-1">실내로 들여오기 (10월 말 ~ 11월 초)</h3>
-                                <p>첫서리가 내리기 전, 밤 기온이 5°C 이하로 떨어지기 시작하면 '정원', '정원 테라스'의 식물들을 실내로 옮겨야 합니다.</p>
-                                <p>들여오기 전 잎 앞뒷면과 흙에 병충해가 없는지 꼼꼼히 살피고, 갑작스런 환경 변화에 식물이 놀라지 않도록 처음 며칠은 창가 근처에 두어 적응시켜 주세요.</p>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-1">야외로 내보내기 (4월 말 ~ 5월 초)</h3>
-                                <p>늦서리 위험이 완전히 사라지고 밤 기온이 10°C 이상으로 안정될 때 다시 야외로 나갈 수 있습니다.</p>
-                                <p>겨우내 실내의 약한 빛에 적응된 상태이므로, 바로 직사광선에 두면 잎이 탑니다. 첫 주에는 그늘에서 시작해 점차 빛의 양을 늘려주는 '경화 과정'이 필수입니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="guide-section">
-                        <h2 class="guide-title">🌱 폭풍 성장을 위한 추천 아이템</h2>
-                        <ul class="space-y-4 text-stone-600 list-inside">
-                            <li class="pl-2 border-l-4 border-teal-200">
-                                <strong class="font-semibold text-teal-800">슬릿 화분:</strong> 뿌리 과습을 방지하고 통풍을 원활하게 하여 뿌리 건강과 성장을 촉진합니다. 특히 과습에 민감한 식물에게 효과적입니다.
-                            </li>
-                            <li class="pl-2 border-l-4 border-teal-200">
-                                <strong class="font-semibold text-teal-800">수태봉/코코봉:</strong> 몬스테라, 필로덴드론 등 덩굴성 식물이 기댈 수 있게 지지해줍니다. 공중 뿌리가 활착하며 더 크고 건강한 잎을 내도록 돕습니다.
-                            </li>
-                            <li class="pl-2 border-l-4 border-teal-200">
-                                <strong class="font-semibold text-teal-800">식물등:</strong> 햇빛이 부족한 실내 환경에서 빛을 보충해주는 필수 아이템입니다. 웃자람을 방지하고 건강한 성장을 돕습니다.
-                            </li>
-                            <li class="pl-2 border-l-4 border-teal-200">
-                                <strong class="font-semibold text-teal-800">서큘레이터:</strong> 공기를 순환시켜 통풍을 개선하고, 병충해 예방에 도움을 줍니다. 특히 여름철 과습 방지에 효과적입니다.
-                            </li>
-                            <li class="pl-2 border-l-4 border-teal-200">
-                                <strong class="font-semibold text-teal-800">프리미엄 배양토:</strong> 펄라이트, 훈탄 등이 배합된 배수가 잘 되는 흙은 뿌리 호흡을 도와 성장에 큰 차이를 만듭니다.
-                            </li>
-                            <li class="pl-2 border-l-4 border-teal-200">
-                                <strong class="font-semibold text-teal-800">영양제 (액비/완효성):</strong> 성장 시기에 맞춰 적절한 영양을 공급하면 더 빠르고 풍성하게 자랍니다. (예: 하이포넥스, 마감프K)
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="p-6 bg-stone-50 rounded-lg mt-6">
-                        <h2 class="text-xl font-bold text-teal-700 mb-3">🌸 계절별 관리 가이드</h2>
-                        <div class="space-y-3 text-stone-700">
-                            <p><strong>🌱 봄 (Spring):</strong> 만물이 소생하는 시기. 대부분의 식물이 활발하게 성장하는 때입니다. 흙이 마르는 속도를 자주 확인하고, 성장세가 보이면 영양제를 주기 시작하세요. 분갈이가 필요하다면 지금이 적기입니다.</p>
-                            <p><strong>☀️ 여름 (Summer):</strong> 성장이 가장 왕성하지만, 고온다습으로 인한 과습과 병충해에 주의해야 합니다. 통풍에 각별히 신경 쓰고, 물주기 횟수는 늘리되 흙 전체가 마를 틈을 주는 것이 중요합니다. 강한 직사광선은 잎을 태울 수 있으니 차광이 필요합니다.</p>
-                            <p><strong>🍂 가을 (Autumn):</strong> 서서히 성장이 둔화되는 시기입니다. 물 주는 횟수와 양을 점차 줄여나가고, 비료 주는 횟수도 줄이거나 중단합니다. 겨울을 대비해 실내로 들일 식물들을 준비하는 시기입니다.</p>
-                            <p><strong>❄️ 겨울 (Winter):</strong> 대부분의 식물이 휴면기에 들어갑니다. 물주기는 흙이 완전히 말랐을 때 최소한으로 주어 뿌리가 마르지 않을 정도로만 관리합니다. 냉해를 입지 않도록 찬 바람이 드는 창가 배치는 피해주세요.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-6 bg-stone-50 rounded-lg mt-6">
-                        <h2 class="text-xl font-bold text-teal-700 mb-3">🐞 병충해 백과</h2>
-                        <div class="space-y-3 text-stone-700">
-                            <p><strong>응애:</strong> 잎 뒷면에 거미줄 같은 것이 보이고 잎 색이 하얗게 바랜다면 응애를 의심해야 합니다. 건조할 때 잘 생기므로, 주기적인 분무로 예방하고, 발생 시 물샤워로 씻어내거나 응애 전문 약을 사용하세요.</p>
-                            <p><strong>깍지벌레:</strong> 잎이나 줄기에 하얀 솜 같은 벌레가 붙어있습니다. 식물의 즙을 빨아먹어 성장을 저해합니다. 발견 즉시 면봉이나 물티슈로 떼어내고, 창문을 열어 통풍을 개선해주세요. 개체 수가 많으면 깍지벌레 약을 사용해야 합니다.</p>
-                            <p><strong>뿌리파리:</strong> 화분 주변에 작은 날벌레가 날아다닌다면 뿌리파리 유충이 흙 속에 있을 가능성이 높습니다. 흙을 건조하게 관리하는 것이 최고의 예방책이며, 끈끈이 트랩을 설치하거나 흙 위에 살충제를 뿌려 유충을 제거할 수 있습니다.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-6 bg-stone-50 rounded-lg mt-6">
-                        <h2 class="text-xl font-bold text-teal-700 mb-3">🪴 식물 번식 가이드</h2>
-                        <div class="space-y-3 text-stone-700">
-                            <p><strong>물꽂이 (Water Propagation):</strong> 가장 쉬운 번식법 중 하나입니다. 마디(공중 뿌리가 나는 지점)를 포함하여 줄기를 잘라 물에 꽂아두면 뿌리가 나옵니다. (예: 스킨답서스, 몬스테라, 필로덴드론)</p>
-                            <p><strong>줄기꽂이 (Stem Cuttings):</strong> 자른 줄기를 바로 흙에 심는 방법입니다. 자른 단면을 1-2시간 말린 후 흙에 심으면 뿌리내림 성공률이 높아집니다. (예: 인도 고무나무, 각종 다육식물)</p>
-                            <p><strong>포기나누기 (Division):</strong> 화분에서 식물을 꺼내 뿌리째로 덩어리를 나누어 심는 방법입니다. 뿌리가 화분에 꽉 찬 식물에게 적합합니다. (예: 스파티필름, 각종 고사리류, 아비스)</p>
-                        </div>
-                    </div>
-
-                    <div class="guide-section mt-6">
-                        <h2 class="guide-title">🌿 나의 식물 조합 스타일링</h2>
-                        <p class="text-sm text-stone-600 mb-4">보유하신 식물들을 기반으로, 함께 두면 시너지가 나는 조합과 추가하면 좋을 식물을 추천해 드립니다.</p>
-                        <div class="space-y-6">
-                            
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-2">1. 모던 & 시크 사막 분위기</h3>
-                                <p class="text-sm text-stone-600 mb-3">직선적이고 깔끔한 형태의 식물들로, 현대적인 인테리어에 포인트를 줍니다. 물을 거의 필요로 하지 않아 관리가 가장 쉬운 조합입니다.</p>
-                                <div class="mb-3">
-                                    <p class="font-semibold text-sm text-teal-700 mb-2">✅ 나의 보유 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-stone-200 text-stone-800 px-3 py-1 text-sm rounded-full">스투키</span>
-                                        <span class="bg-stone-200 text-stone-800 px-3 py-1 text-sm rounded-full">금전수</span>
-                                        <span class="bg-stone-200 text-stone-800 px-3 py-1 text-sm rounded-full">산세비에리아</span>
-                                        <span class="bg-stone-200 text-stone-800 px-3 py-1 text-sm rounded-full">괴마옥</span>
-                                        <span class="bg-stone-200 text-stone-800 px-3 py-1 text-sm rounded-full">크라슐라 부다템플</span>
-                                    </div>
+        function renderStylingGuideView() {
+            const themesData = {
+                "정글": {
+                    icon: "🌳",
+                    description: "무성하고 이국적인 열대의 안식처. 밀도 높고, 습하며, 다층적인 열대 환경을 조성합니다.",
+                    concepts: ["다층적 레이어링", "높은 습도", "풍성한 잎", "이국적 패턴"],
+                    styling: {
+                        thriller: "<strong>Thriller (시선을 끄는 중심):</strong> 몬스테라 델리시오사, 인도 고무나무. 공간의 중심에 배치하여 웅장함을 연출하세요.",
+                        filler: "<strong>Filler (공간을 채우는 중간층):</strong> 아레카야자, 스파티필름, 칼라데아. 중심 식물 주변에 두어 볼륨감을 더하고 다양한 잎의 색과 질감을 즐겨보세요.",
+                        spiller: "<strong>Spiller (늘어지는 매력):</strong> 몬스테라 아단소니, 스킨답서스. 선반이나 행잉 바스켓으로 입체적인 정글 느낌을 완성할 수 있습니다."
+                    },
+                    care: {
+                        light: "<strong>빛:</strong> 대부분 밝은 간접광을 선호합니다. 강한 직사광선은 잎을 태울 수 있으니 커튼이나 창문을 통해 한 번 거른 빛이 좋습니다.",
+                        water: "<strong>물 & 습도:</strong> 흙이 마르면 물을 주되, 공중 습도를 60% 이상으로 높게 유지하는 것이 핵심입니다. 가습기 사용, 식물 군집, 잦은 분무가 효과적입니다."
+                    }
+                },
+                "아프리카": {
+                    icon: "🏜️",
+                    description: "조형미와 따뜻한 대지의 서사. 대담하고 건축적인 실루엣과 강인한 생명력에 집중합니다.",
+                    concepts: ["조형미", "건축적 실루엣", "강인한 생명력", "미니멀리즘"],
+                     styling: {
+                        thriller: "<strong>Thriller (강렬한 실루엣):</strong> 산세비에리아, 스투키, 파피루스. 수직적인 라인을 강조하여 모던하고 대담한 분위기를 연출합니다.",
+                        filler: "<strong>Filler (독특한 형태):</strong> 금전수, 괴마옥, 아스파라거스 메이리. 비슷한 질감의 토분에 심어 그룹으로 배치하면 사막 풍경 같은 느낌을 줍니다.",
+                        spiller: "<strong>Spiller (이국적인 질감):</strong> 연필선인장, 또는 추천 식물인 '녹태고(스트링 오브 펄스)'를 선반에서 늘어뜨려 부드러움을 더할 수 있습니다."
+                    },
+                    care: {
+                        light: "<strong>빛:</strong> 강하고 많은 빛을 필요로 합니다. 집에서 가장 해가 잘 드는 남향, 서향 창가가 최고의 명당입니다.",
+                        water: "<strong>물 & 습도:</strong> 물을 매우 아껴야 합니다. 흙이 완전히 마른 후 며칠 뒤에 물을 주는 것이 안전합니다. 건조한 환경에 매우 강합니다."
+                    }
+                },
+                "지중해": {
+                    icon: "🌿",
+                    description: "햇살, 향기, 그리고 평온함. 밝고, 바람이 잘 통하며, 향기로운 공간을 만듭니다.",
+                    concepts: ["햇살과 통풍", "향기", "실용성", "테라코타 화분"],
+                     styling: {
+                        thriller: "<strong>Thriller (이국적 포인트):</strong> 추천 식물인 '올리브 나무'나 '유칼립투스'를 테라코타 화분에 심어 창가에 배치하면 바로 지중해 분위기가 납니다.",
+                        filler: "<strong>Filler (향기와 색감):</strong> 바질, 고수, 루꼴라. 주방 창가나 테라스에 모아두어 '키친 가든'을 만들고 요리에 바로 활용해보세요.",
+                        spiller: "<strong>Spiller (부드러운 라인):</strong> 포인세티아나 추천 식물인 '로즈마리'의 일부 품종을 화분 가장자리에 심어 자연스럽게 늘어지게 연출할 수 있습니다."
+                    },
+                    care: {
+                        light: "<strong>빛:</strong> 햇빛을 매우 좋아하며, 하루 6시간 이상의 직사광선을 받을 수 있는 곳이 좋습니다.",
+                        water: "<strong>물 & 습도:</strong> 물을 좋아하지만 배수가 매우 중요합니다. 통풍이 잘 되어 흙이 빠르게 마르는 환경을 만들어주세요."
+                    }
+                }
+            };
+            
+            const generalGuideHTML = `
+                <div class="mt-12 pt-8 border-t-4 border-double border-teal-200">
+                    <header class="text-center mb-8">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-stone-800">🌿 종합 식물 케어 가이드</h2>
+                        <p class="text-base text-stone-600 mt-2">모든 테마에 적용되는 기본적인 관리 지식입니다.</p>
+                    </header>
+                    <div class="space-y-6">
+                        <div class="guide-section">
+                            <h2 class="guide-title">현명한 비료 사용법</h2>
+                             <div class="space-y-4 text-stone-700 text-sm sm:text-base">
+                                <div>
+                                    <h3 class="font-bold text-base text-stone-800 mb-1">1. 액상 비료 (빠른 성장 지원)</h3>
+                                    <p><strong class="text-teal-600">언제:</strong> 식물이 활발히 자라는 봄~가을 (4월~10월).</p>
+                                    <p><strong class="text-teal-600">어떻게:</strong> 제품 설명서에 맞춰 물에 희석하여, 물 주는 날 2주~1달 간격으로 흙에 부어줍니다.</p>
+                                    <p><strong class="text-teal-600">핵심팁:</strong> 과용은 뿌리를 상하게 할 수 있습니다. 차라리 기준보다 옅게 희석해서 주는 것이 안전합니다.</p>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-sm text-purple-700 mb-2">✨ 추가 추천 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="조각같은 형태로 미니멀한 공간에 잘 어울립니다.">용설란</span>
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="다양한 모양과 크기로 컬렉션을 만드는 재미가 있습니다.">선인장</span>
-                                    </div>
+                                    <h3 class="font-bold text-base text-stone-800 mb-1">2. 알갱이 비료 (지속적인 기초 영양)</h3>
+                                    <p><strong class="text-teal-600">언제:</strong> 봄철 분갈이 시 또는 매년 봄 화분 위.</p>
+                                    <p><strong class="text-teal-600">어떻게:</strong> 분갈이 시 흙에 소량 섞어주거나, 화분 위 흙에 살짝 파묻어 줍니다. 물을 줄 때마다 서서히 녹아 3~6개월간 영양을 공급합니다.</p>
+                                    <p><strong class="text-teal-600">핵심팁:</strong> 뿌리에 직접 닿으면 좋지 않으니, 흙과 잘 섞거나 흙 위에 올려두는 방식으로 사용하세요.</p>
                                 </div>
                             </div>
-
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-2">2. 싱그러운 트로피컬 정글</h3>
-                                <p class="text-sm text-stone-600 mb-3">크고 화려한 잎사귀들로 공간을 풍성하고 생기 넘치게 만듭니다. 높은 습도를 좋아하므로, 함께 모아두고 가습기를 틀어주면 시너지가 좋습니다.</p>
-                                <div class="mb-3">
-                                    <p class="font-semibold text-sm text-teal-700 mb-2">✅ 나의 보유 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 text-sm rounded-full">몬스테라 델리시오사</span>
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 text-sm rounded-full">몬스테라 아단소니</span>
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 text-sm rounded-full">인도 고무나무</span>
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 text-sm rounded-full">아레카야자</span>
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 text-sm rounded-full">필로덴드론 핑크/화이트 프린세스</span>
-                                        <span class="bg-green-200 text-green-800 px-3 py-1 text-sm rounded-full">모든 칼라데아 종류</span>
-                                    </div>
+                        </div>
+                        <div class="guide-section">
+                            <h2 class="guide-title">🐞 병충해 백과사전</h2>
+                            <div class="space-y-3 text-stone-700">
+                                <p><strong>응애:</strong> 잎 뒷면에 거미줄 같은 것이 보이고 잎 색이 하얗게 바랜다면 응애를 의심해야 합니다. 건조할 때 잘 생기므로, 주기적인 분무로 예방하고, 발생 시 물샤워로 씻어내거나 응애 전문 약을 사용하세요.</p>
+                                <p><strong>깍지벌레:</strong> 잎이나 줄기에 하얀 솜 같은 벌레가 붙어있습니다. 식물의 즙을 빨아먹어 성장을 저해합니다. 발견 즉시 면봉이나 물티슈로 떼어내고, 창문을 열어 통풍을 개선해주세요. 개체 수가 많으면 깍지벌레 약을 사용해야 합니다.</p>
+                                <p><strong>뿌리파리:</strong> 화분 주변에 작은 날벌레가 날아다닌다면 뿌리파리 유충이 흙 속에 있을 가능성이 높습니다. 흙을 건조하게 관리하는 것이 최고의 예방책이며, 끈끈이 트랩을 설치하거나 흙 위에 살충제를 뿌려 유충을 제거할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="guide-section">
+                            <h2 class="guide-title">🪴 식물 번식 가이드</h2>
+                            <div class="space-y-3 text-stone-700">
+                                <p><strong>물꽂이 (Water Propagation):</strong> 가장 쉬운 번식법 중 하나입니다. 마디(공중 뿌리가 나는 지점)를 포함하여 줄기를 잘라 물에 꽂아두면 뿌리가 나옵니다. (예: 스킨답서스, 몬스테라, 필로덴드론)</p>
+                                <p><strong>줄기꽂이 (Stem Cuttings):</strong> 자른 줄기를 바로 흙에 심는 방법입니다. 자른 단면을 1-2시간 말린 후 흙에 심으면 뿌리내림 성공률이 높아집니다. (예: 인도 고무나무, 각종 다육식물)</p>
+                                <p><strong>포기나누기 (Division):</strong> 화분에서 식물을 꺼내 뿌리째로 덩어리를 나누어 심는 방법입니다. 뿌리가 화분에 꽉 찬 식물에게 적합합니다. (예: 스파티필름, 각종 고사리류, 아비스)</p>
+                            </div>
+                        </div>
+                        <div class="guide-section">
+                             <h2 class="guide-title">❄️ 계절별 관리법 (월동 가이드 포함)</h2>
+                             <div class="space-y-4 text-stone-700 text-sm sm:text-base">
+                                <div>
+                                    <h3 class="font-bold text-base text-stone-800 mb-1">실내로 들여오기 (10월 말 ~ 11월 초)</h3>
+                                    <p>첫서리가 내리기 전, 밤 기온이 5°C 이하로 떨어지기 시작하면 '정원', '정원 테라스'의 식물들을 실내로 옮겨야 합니다. 들여오기 전 병충해가 없는지 꼼꼼히 살피세요.</p>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-sm text-purple-700 mb-2">✨ 추가 추천 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="독특한 잎맥과 형태로 이국적인 느낌을 더해줍니다.">알로카시아</span>
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="벨벳 질감의 잎이나 화려한 무늬를 가진 품종이 많아 컬렉션을 풍성하게 합니다.">안스리움</span>
-                                    </div>
+                                    <h3 class="font-bold text-base text-stone-800 mb-1">야외로 내보내기 (4월 말 ~ 5월 초)</h3>
+                                    <p>늦서리 위험이 완전히 사라지고 밤 기온이 10°C 이상으로 안정될 때 다시 야외로 나갈 수 있습니다. 겨우내 약한 빛에 적응된 상태이므로, 그늘에서 시작해 점차 빛의 양을 늘려주는 '경화 과정'이 필수입니다.</p>
+                                </div>
+                                <div class="mt-4 pt-4 border-t border-stone-200">
+                                    <p><strong>🌱 봄:</strong> 성장 시작. 물주기 횟수를 늘리고 비료를 주기 시작하세요. 분갈이 적기입니다.</p>
+                                    <p><strong>☀️ 여름:</strong> 성장 왕성기. 통풍과 과습에 주의하고, 강한 직사광선은 차광해주세요.</p>
+                                    <p><strong>🍂 가을:</strong> 성장 둔화기. 물과 비료를 점차 줄여나가며 겨울을 준비합니다.</p>
+                                    <p><strong>❄️ 겨울:</strong> 휴면기. 물주기를 최소화하고 냉해에 주의하세요.</p>
                                 </div>
                             </div>
-
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-2">3. 우아한 고사리 & 야자수 라운지</h3>
-                                <p class="text-sm text-stone-600 mb-3">섬세하고 부드러운 잎선이 특징으로, 편안하고 클래식한 분위기를 연출합니다. 대부분 반그늘에서도 잘 자라 실내 깊숙한 곳을 채우기 좋습니다.</p>
-                                <div class="mb-3">
-                                    <p class="font-semibold text-sm text-teal-700 mb-2">✅ 나의 보유 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-teal-200 text-teal-800 px-3 py-1 text-sm rounded-full">보스턴 고사리</span>
-                                        <span class="bg-teal-200 text-teal-800 px-3 py-1 text-sm rounded-full">아비스고사리</span>
-                                        <span class="bg-teal-200 text-teal-800 px-3 py-1 text-sm rounded-full">테이블야자</span>
-                                        <span class="bg-teal-200 text-teal-800 px-3 py-1 text-sm rounded-full">아스파라거스 메이리</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-sm text-purple-700 mb-2">✨ 추가 추천 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="밤이 되면 잎을 모으는 신비로운 식물로, 화려한 잎 무늬가 매력적입니다.">마란타</span>
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="더욱 웅장한 야자수 느낌을 원할 때 좋습니다.">켄차야자</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3 class="font-bold text-base text-stone-800 mb-2">4. 향기로운 키친 가든</h3>
-                                <p class="text-sm text-stone-600 mb-3">요리에 바로 활용할 수 있는 허브들로 주방을 싱그럽게 만듭니다. 햇빛과 통풍을 좋아하며, 자주 수확해줄수록 풍성하게 자랍니다.</p>
-                                <div class="mb-3">
-                                    <p class="font-semibold text-sm text-teal-700 mb-2">✅ 나의 보유 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-lime-200 text-lime-800 px-3 py-1 text-sm rounded-full">고수</span>
-                                        <span class="bg-lime-200 text-lime-800 px-3 py-1 text-sm rounded-full">루꼴라</span>
-                                        <span class="bg-lime-200 text-lime-800 px-3 py-1 text-sm rounded-full">바질</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-sm text-purple-700 mb-2">✨ 추가 추천 식물</p>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="요리의 풍미를 더해주고 좋은 향기를 내뿜습니다.">로즈마리</span>
-                                        <span class="bg-purple-100 text-purple-800 px-3 py-1 text-sm rounded-full" title="음료나 디저트에 활용하기 좋고 생명력이 매우 강합니다.">애플민트</span>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="guide-section">
+                            <h2 class="guide-title">💡 폭풍 성장을 위한 추천 아이템</h2>
+                             <ul class="space-y-4 text-stone-600 list-inside">
+                                <li class="pl-2 border-l-4 border-teal-200">
+                                    <strong class="font-semibold text-teal-800">슬릿 화분:</strong> 뿌리 과습을 방지하고 통풍을 원활하게 하여 뿌리 건강과 성장을 촉진합니다.
+                                </li>
+                                <li class="pl-2 border-l-4 border-teal-200">
+                                    <strong class="font-semibold text-teal-800">수태봉/코코봉:</strong> 몬스테라, 필로덴드론 등 덩굴성 식물이 기댈 수 있게 지지해줍니다.
+                                </li>
+                                <li class="pl-2 border-l-4 border-teal-200">
+                                    <strong class="font-semibold text-teal-800">식물등:</strong> 햇빛이 부족한 실내 환경에서 빛을 보충해주는 필수 아이템입니다.
+                                </li>
+                                <li class="pl-2 border-l-4 border-teal-200">
+                                    <strong class="font-semibold text-teal-800">서큘레이터:</strong> 공기를 순환시켜 통풍을 개선하고, 병충해 예방에 도움을 줍니다.
+                                </li>
+                                <li class="pl-2 border-l-4 border-teal-200">
+                                    <strong class="font-semibold text-teal-800">프리미엄 배양토:</strong> 배수가 잘 되는 흙은 뿌리 호흡을 도와 성장에 큰 차이를 만듭니다.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             `;
-        }
 
+            appContainer.innerHTML = `
+                <div id="theme-view" class="space-y-10">
+                    <header class="text-center">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-stone-800">테마 & 스타일링 가이드</h2>
+                        <p class="text-base text-stone-600 mt-2">세 가지 테마로 완성하는 나만의 보태니컬 홈</p>
+                    </header>
+                    
+                    <!-- 테마별 스타일링 섹션 -->
+                    ${Object.keys(themesData).map(themeName => {
+                        const theme = themesData[themeName];
+                        const plantsInTheme = database.plants.filter(p => p.theme === themeName);
+                        const recommendationsInTheme = themeRecommendations[themeName] || [];
+                        
+                        return `
+                        <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg border-t-4" style="border-color: ${themeName === '정글' ? '#10B981' : themeName === '아프리카' ? '#F59E0B' : '#60A5FA'};">
+                            <h3 class="text-2xl sm:text-3xl font-bold mb-2 flex items-center" style="color: ${themeName === '정글' ? '#047857' : themeName === '아프리카' ? '#B45309' : '#1D4ED8'};">
+                                <span class="text-3xl mr-3">${theme.icon}</span> ${themeName}
+                            </h3>
+                            <p class="text-stone-600 mb-4 text-sm sm:text-base italic">"${theme.description}"</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                ${theme.concepts.map(concept => `<span class="bg-stone-200 text-stone-700 px-3 py-1 text-xs font-semibold rounded-full">${concept}</span>`).join('')}
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-3 text-stone-800 border-b pb-2">🎨 이 테마의 식물들</h4>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-3">
+                                        ${plantsInTheme.map(plant => `
+                                            <div class="bg-stone-50 p-3 rounded-lg border-l-4 border-stone-300 transition hover:shadow-md hover:border-stone-400">
+                                                <p class="font-semibold text-stone-800">${plant.name}</p>
+                                                <p class="text-xs text-stone-500 mt-1">${plant.visual_feature}</p>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-3 text-stone-800 border-b pb-2">🌿 스타일링 및 배치 전략</h4>
+                                    <div class="space-y-2 text-sm text-stone-700 p-4 bg-stone-50 rounded-lg mt-3">
+                                        <p>${theme.styling.thriller}</p>
+                                        <p>${theme.styling.filler}</p>
+                                        <p>${theme.styling.spiller}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-3 text-stone-800 border-b pb-2">💡 핵심 관리 가이드</h4>
+                                     <div class="space-y-2 text-sm text-stone-700 p-4 bg-stone-50 rounded-lg mt-3">
+                                        <p>${theme.care.light}</p>
+                                        <p>${theme.care.water}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-3 text-purple-800 border-b pb-2">✨ 컬렉션에 추가하기</h4>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                                        ${recommendationsInTheme.map(rec => `
+                                            <div class="bg-purple-50 p-3 rounded-lg border-l-4 border-purple-300 transition hover:shadow-md hover:border-purple-400">
+                                                <p class="font-semibold text-purple-800">${rec.name}</p>
+                                                <p class="text-sm text-purple-700 mt-1">${rec.reason}</p>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+                    }).join('')}
+                    
+                    <!-- 종합 식물 케어 가이드 -->
+                    ${generalGuideHTML}
+                </div>
+            `;
+        }
+        
         function renderSpaceView() {
             const recoveryPlants = database.plants.filter(p => p.recovery.space === currentSpace);
             const growthPlants = database.plants
@@ -1004,55 +1026,6 @@
             });
         }
         
-        function renderThemeView() {
-            const themes = {
-                "정글": "무성하고 이국적인 열대의 안식처. 밀도 높고, 습하며, 다층적인 열대 환경을 조성합니다.",
-                "아프리카": "조형미와 따뜻한 대지의 서사. 대담하고 건축적인 실루엣과 강인한 생명력에 집중합니다.",
-                "지중해": "햇살, 향기, 그리고 평온함. 밝고, 바람이 잘 통하며, 향기로운 공간을 만듭니다."
-            };
-            const themeIcons = { "정글": "🌳", "아프리카": "🏜️", "지중해": "🌿" };
-
-            appContainer.innerHTML = `
-                <div id="theme-view" class="space-y-8">
-                    <header class="text-center">
-                        <h2 class="text-2xl sm:text-3xl font-bold text-stone-800">당신의 공간을 위한 식물 아틀라스</h2>
-                        <p class="text-base text-stone-600 mt-2">세 가지 테마로 완성하는 보태니컬 홈</p>
-                    </header>
-                    ${Object.keys(themes).map(themeName => `
-                        <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg">
-                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-teal-700">${themeIcons[themeName]} ${themeName}</h3>
-                            <p class="text-stone-600 mb-6 text-sm sm:text-base">${themes[themeName]}</p>
-                            
-                            <div class="mb-6">
-                                <h4 class="font-bold text-lg mb-3 text-stone-800">✅ 보유 식물</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    ${database.plants.filter(p => p.theme === themeName).map(plant => `
-                                        <div class="bg-stone-50 p-4 rounded-lg border-l-4 border-stone-300">
-                                            <p class="font-semibold text-stone-800">${plant.name}</p>
-                                            <p class="text-sm text-stone-600 mt-1"><strong>특징:</strong> ${plant.visual_feature}</p>
-                                            <p class="text-sm text-stone-600 mt-1"><strong>팁:</strong> ${plant.styling_note}</p>
-                                        </div>
-                                    `).join('') || '<p class="text-stone-500 text-sm col-span-full">이 테마에 해당하는 보유 식물이 없습니다.</p>'}
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 class="font-bold text-lg mb-3 text-purple-800">✨ 신규 추천 식물</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    ${(themeRecommendations[themeName] || []).map(rec => `
-                                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-300">
-                                            <p class="font-semibold text-purple-800">${rec.name}</p>
-                                            <p class="text-sm text-purple-700 mt-1">${rec.reason}</p>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-
         function handleNavClick(view) { currentView = view; render(); }
         function handleSpaceSelect(spaceName) { currentSpace = spaceName; render(); }
         function handlePlantSelect(plantName) { currentPlant = plantName; render(); }
@@ -1060,8 +1033,7 @@
         document.getElementById('nav-space').addEventListener('click', () => handleNavClick('space'));
         document.getElementById('nav-plant').addEventListener('click', () => handleNavClick('plant'));
         document.getElementById('nav-analysis').addEventListener('click', () => handleNavClick('analysis'));
-        document.getElementById('nav-guide').addEventListener('click', () => handleNavClick('guide'));
-        document.getElementById('nav-themes').addEventListener('click', () => handleNavClick('themes'));
+        document.getElementById('nav-styling').addEventListener('click', () => handleNavClick('styling'));
 
         window.onload = render;
     </script>
